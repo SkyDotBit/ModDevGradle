@@ -147,7 +147,7 @@ final class RunUtils {
 
     public static Provider<RegularFile> getLaunchScript(Provider<Directory> modDevFolder, RunModel run) {
         var scriptExtension = switch (OperatingSystem.current()) {
-            case LINUX, MACOS -> ".sh";
+            case LINUX, MACOS, OPENBSD -> ".sh";
             case WINDOWS -> ".cmd";
         };
 

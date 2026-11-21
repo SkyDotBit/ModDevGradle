@@ -17,4 +17,5 @@ public interface OperatingSystem extends Named {
     String LINUX = "linux";
     String MACOSX = "osx";
     String WINDOWS = "windows";
+    String OPENBSD = "openbsd";
 }

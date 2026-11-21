@@ -33,6 +33,7 @@ public class MinecraftDependenciesPlugin implements Plugin<Project> {
             case LINUX -> OperatingSystem.LINUX;
             case MACOS -> OperatingSystem.MACOSX;
             case WINDOWS -> OperatingSystem.WINDOWS;
+            case OPENBSD -> OperatingSystem.OPENBSD;
         };
     }
 }

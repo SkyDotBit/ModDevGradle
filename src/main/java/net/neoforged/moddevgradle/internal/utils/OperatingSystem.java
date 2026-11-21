@@ -5,7 +5,8 @@ import org.gradle.api.GradleException;
 public enum OperatingSystem {
     LINUX,
     MACOS,
-    WINDOWS;
+    WINDOWS,
+    OPENBSD;
 
     public static OperatingSystem current() {
         var osName = System.getProperty("os.name");
@@ -16,6 +17,8 @@ public enum OperatingSystem {
             return MACOS;
         } else if (osName.startsWith("Windows")) {
             return WINDOWS;
+        } else if (osName.startsWith("OpenBSD")) {
+            return OPENBSD
         } else {
             throw new GradleException("Unsupported operating system: " + osName);
         }
